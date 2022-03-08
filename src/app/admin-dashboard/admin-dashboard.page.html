@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper" style="min-height: 700px;" style="min-height: 800px;">
+      <div class="main-panel">
+        <div class="content-wrapper" style="padding-right: 10px !important;padding-left: 10px !important;">
+
+          <div class="page-header">
+            <h3 class="page-title" (click)="presentActionSheet()">
+              <span class="page-title-icon mr-6">
+                <ion-icon name="menu-outline"></ion-icon>
+              </span> Menu
+            </h3>
+          </div>
+          <div class="row">
+            <div class="col-md-4 stretch-card grid-margin">
+              <div class="card bg-gradient-success card-img-holder text-white">
+                <div class="card-body" style="padding-right: 10px !important;padding-left: 10px !important;">
+                  <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                  <h4 class="font-weight-normal mb-3">Gas Available <i class="mdi mdi-diamond mdi-24px float-right"></i>
+                  </h4>
+                  <h2 class="mb-5">{{gas_value}} KG</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ion-padding">
+            <ion-card>
+              <ion-card-header>
+                <p style="color: red;">{{response}}</p>
+                <ion-button (click)="getbardata(datay)" class="bg-dark">GET RECORDS
+                </ion-button>
+                <ion-item>
+                  <ion-label>Enter year</ion-label>
+                  <ion-input type="number" [(ngModel)]="datay"></ion-input>
+                </ion-item>
+              </ion-card-header>
+              <ion-card-content>
+                <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+              </ion-card-content>
+            </ion-card>
+          </div>
+
+        </div>
+        <!-- content-wrapper ends -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+</ion-content>

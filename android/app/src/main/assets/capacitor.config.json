@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "gas",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
